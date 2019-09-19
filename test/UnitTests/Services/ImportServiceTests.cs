@@ -83,7 +83,7 @@ namespace Core.Tests.Services
         string GetAppRoot()
         {
             Assembly assembly;
-            var assemblyName = "Core.Tests";
+            var assemblyName = "UnitTests";
 
             assembly = Assembly.Load(new AssemblyName(assemblyName));
 
@@ -91,7 +91,7 @@ namespace Core.Tests.Services
             var path = Uri.UnescapeDataString(uri.Path);
             var root = Path.GetDirectoryName(path);
             root = root.Substring(0, root.IndexOf(assemblyName));
-            root = root.Replace($"tests{_separator}", $"src{_separator}");
+            root = root.Replace($"test{_separator}", $"src{_separator}");
 
             root = Path.Combine(root, "App");
             root = Path.Combine(root, "wwwroot");

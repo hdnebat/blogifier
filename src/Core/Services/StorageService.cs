@@ -401,7 +401,7 @@ namespace Core.Services
 
             // unit tests of seed data load
             Assembly assembly;
-            var assemblyName = "Core.Tests";
+            var assemblyName = "UnitTests";
             try
             {
                 assembly = Assembly.Load(new AssemblyName(assemblyName));
@@ -417,9 +417,9 @@ namespace Core.Services
             var root = Path.GetDirectoryName(path);
             root = root.Substring(0, root.IndexOf(assemblyName));
 
-            if (root.EndsWith($"tests{_separator}"))
+            if (root.EndsWith($"test{_separator}"))
             {
-                root = root.Replace($"tests{_separator}", $"src{_separator}");
+                root = root.Replace($"test{_separator}", $"src{_separator}");
             }
 
             return Path.Combine(root, "App");
