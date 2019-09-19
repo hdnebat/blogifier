@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <product>Blogifier.Plugins.Common</product>
+    <ProjectGuid>{1FDA4AE3-F5C6-41E4-8D22-28918A0722CE}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <Version>2.4.0.0</Version>
+    <ProjectGuid>{6DE4CFAE-EB70-42F1-B1E1-615D5DE85014}</ProjectGuid>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

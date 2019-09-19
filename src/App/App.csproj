@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
     <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+    <ProjectGuid>{F3F88F5E-8314-4401-997C-64467892705B}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
