@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.godwit.service:  blog-{{.Chart.Version}}
+  name: blog-{{.Chart.Version}}
+  namespace: {{.Values.namepsace}}
+spec:
+  replicas: {{.Values.replicaCount}}
+  selector:
+    matchLabels:
+      io.godwit.service:  blog-{{.Chart.Version}}
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        io.godwit.service:  blog-{{.Chart.Version}}
+    spec:
+      containers:
+      - image: registry.godwit.io/blogifier:{{.Chart.Version}}
+        imagePullPolicy: Always
+        name: blog-{{.Chart.Version}}
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+      resources: {}
+      imagePullSecrets:
+      - name: {{ .Values.imagePullSecret }}
+      restartPolicy: Always

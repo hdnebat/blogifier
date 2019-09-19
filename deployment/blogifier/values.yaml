@@ -1,0 +1,4 @@
+replicaCount: 1
+namespace: blog
+imagePullSecret: godwit
+host: blog.godwit.io
