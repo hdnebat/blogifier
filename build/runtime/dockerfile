@@ -4,4 +4,4 @@ LABEL Author "Hamza Althunibat <althunibat@outlook.com>"
 COPY publish/. /app
 WORKDIR /app
 EXPOSE 80
-CMD [ "dotnet", "Api.dll" ]
+CMD [ "dotnet", "App.dll" ]
