@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-  name: blog-{{.Release.Name}}
+  name: blog-{{.Chart.Version}}
   namespace: {{.Values.namepsace}}
 spec:
   rules:
@@ -11,7 +11,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: blog-{{.Release.Name}}
+          serviceName: blog-{{.Chart.Version}}
           servicePort: 80
         path: /
 

@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: blog-{{.Release.Name}}
+  name: blog-{{.Chart.Version}}
   namespace: {{.Values.namepsace}}
 spec:
   ports:
@@ -10,6 +10,6 @@ spec:
       port: 80
       targetPort: 80
   selector:
-    io.godwit.service:  blog-{{.Release.Name}}
+    io.godwit.service:  blog-{{.Chart.Version}}
   type: ClusterIP
 ---
