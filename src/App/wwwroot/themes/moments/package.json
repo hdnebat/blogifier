@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is only for compiling sass files.",
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.3.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0"
   }
